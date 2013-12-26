@@ -25,18 +25,31 @@ class Month
     m = {1 => 31, 2 => 28, 3 => 31, 4 => 31, 5 => 31, 6 => 30, 7 => 31, 8 => 31, 9 => 30, 10 => 31, 11 => 30, 12 => 31}
     days_in_month = "#{m[@month]}"
     d = days_in_month.to_i
-    a = (1..d).to_a
+    # a = (1..d).to_a
+    # r = (1..d).to_s
+    r = (1..d)
+
     # a[0..d].each {|day| print day}
-    @days_in_month = a.to_s
+    @days_in_month = r
 
   end
 
-
   def first_day_of_month
-    spaces = {1 => " ", 2 => "   ", 3 => "     "}
+    spaces = {1 => " ", 2 => "    ", 3 => "       ", 4 => "          ", 5 => "             ", 6 => "                ", 0 => "                   "}
     zeller
     day_starts = "#{spaces[@day_one]}"
   end
+
+  def spacing
+    days_in_month
+    # days_in_month.to_i
+    # @days_in_month.split(", ")
+    # spacing = "#{@days_in_month}"
+    @days_in_month.map{|d| Integer d}
+
+  end
+
+
 
 end
 
