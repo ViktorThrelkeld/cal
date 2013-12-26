@@ -53,12 +53,18 @@ EOS
 
   def test_9_days_in_month_on_jan
     month = Month.new(1, 2000)
-    assert_equal(31, month.days_in_month)
+    expected = <<EOS
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+EOS
+    assert_equal(expected.chomp, month.days_in_month)
   end
 
   def test_10_days_in_month_on_sept
     month = Month.new(9, 2000)
-    assert_equal(30, month.days_in_month)
+    expected = <<EOS
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+EOS
+    assert_equal(expected.chomp, month.days_in_month)
   end
 
   def test_11_first_day_of_month_exists
@@ -67,8 +73,8 @@ EOS
   end
 
   def test_12_first_day_of_month_on_sept
-    # month = Month.new(9, 2013)
-    # assert_equal(, month.first_day_of_month)
+    month = Month.new(9, 2013)
+    assert_equal(" ", month.first_day_of_month)
   end
 
 
