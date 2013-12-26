@@ -51,21 +51,21 @@ EOS
     month.days_in_month
   end
 
-  def test_9_days_in_month_on_jan
-    month = Month.new(1, 2000)
-    expected = <<EOS
-1..31
-EOS
-    assert_equal(expected.chomp, month.days_in_month)
-  end
+#   def test_9_days_in_month_on_jan
+#     month = Month.new(1, 2000)
+#     expected = <<EOS
+# 1..31
+# EOS
+#     assert_equal(expected.chomp, month.days_in_month)
+#   end
 
-  def test_10_days_in_month_on_sept
-    month = Month.new(9, 2000)
-    expected = <<EOS
-1..30
-EOS
-    assert_equal(expected.chomp, month.days_in_month)
-  end
+#   def test_10_days_in_month_on_sept
+#     month = Month.new(9, 2000)
+#     expected = <<EOS
+# 1..30
+# EOS
+#     assert_equal(expected.chomp, month.days_in_month)
+#   end
 
   def test_11_first_day_of_month_exists
     month = Month.new(9, 2000)

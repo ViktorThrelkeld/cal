@@ -45,7 +45,10 @@ class Month
     # days_in_month.to_i
     # @days_in_month.split(", ")
     # spacing = "#{@days_in_month}"
-    @days_in_month.map{|d| Integer d}
+    @days_in_month.to_a
+    # @days_in_month.map{|d| Integer d}
+    @days_in_month.each{|d| print d}
+
 
   end
 
