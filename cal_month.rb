@@ -37,18 +37,20 @@ class Month
   def first_day_of_month
     spaces = {1 => " ", 2 => "    ", 3 => "       ", 4 => "          ", 5 => "             ", 6 => "                ", 0 => "                   "}
     zeller
-    day_starts = "#{spaces[@day_one]}"
+    @day_starts = "#{spaces[@day_one]}"
   end
 
   def spacing
     days_in_month
+    header
+    first_day_of_month
     # days_in_month.to_i
     # @days_in_month.split(", ")
     # spacing = "#{@days_in_month}"
     @days_in_month.to_a
-    # @days_in_month.map{|d| Integer d}
-    @days_in_month.each{|d| print d}
-
+    days = @days_in_month.map{|d| Integer d}
+    # @days_in_month.each{|d| print d}
+    @header + "\n" + @day_starts + "#{days}"
 
   end
 
