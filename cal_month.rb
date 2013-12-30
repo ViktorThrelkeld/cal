@@ -55,18 +55,10 @@ class Month
 
   def line_break
     days = spacing
-    # days.gsub(/(.{20})/, "\n")
-    days.gsub(/(.{1,21})/, "\n").strip
-    # days.scan(/.{1,21}/).join("\n")
-    # days.scan(/.{1, 20}/).join("\n")
-
-    # days = spacing.scan(/.{1,20}/).insert("\n")
-    # word_wrap(spacing, :line_width => 20)
+    days = days.scan(/.{1,21}/)
+    days = days.map{|days| days.rstrip}
+    days.join("\n")
   end
-
-
-
-
 end
 
 
