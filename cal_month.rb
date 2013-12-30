@@ -1,4 +1,8 @@
+
 class Month
+  # include ActionView::Helpers::TextHelper
+  # helper :text
+
   def initialize(month, year)
     @month = month
     @year = year
@@ -48,6 +52,18 @@ class Month
     end
     days = days.join(" ")
   end
+
+  def line_break
+    days = spacing
+    # days.gsub(/(.{20})/, "\n")
+    days.gsub(/(.{1,21})/, "\n").strip
+    # days.scan(/.{1,21}/).join("\n")
+    # days.scan(/.{1, 20}/).join("\n")
+
+    # days = spacing.scan(/.{1,20}/).insert("\n")
+    # word_wrap(spacing, :line_width => 20)
+  end
+
 
 
 
