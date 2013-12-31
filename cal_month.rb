@@ -1,7 +1,5 @@
 
 class Month
-  # include ActionView::Helpers::TextHelper
-  # helper :text
 
   def initialize(month, year)
     @month = month
@@ -54,10 +52,14 @@ class Month
   end
 
   def line_break
-    days = spacing
+    days = first_day_of_month + spacing
     days = days.scan(/.{1,21}/)
     days = days.map{|days| days.rstrip}
     days.join("\n")
+  end
+
+  def output_month
+    header.rstrip + "\n" + line_break
   end
 end
 
