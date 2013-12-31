@@ -4,22 +4,15 @@ require 'minitest/autorun'
 
 class TestCalYear < MiniTest::Unit::TestCase
 
-  def test_1_year_header
-    year = Year.new(1977)
-    expected = <<EOS
-                            1977
-EOS
-assert_equal( expected.chomp, year.year_header)
-  end
 
-  def test_2_year_header_includes_months
+  def test_1_year_header_includes_months
     year = Year.new(1996)
     expected = <<EOS
                             1996
-
+      January               February               March
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 EOS
 assert_equal( expected.chomp, year.year_header)
-
   end
 
 
