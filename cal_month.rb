@@ -1,6 +1,7 @@
 
 class Month
 attr_reader :header
+attr_reader :output_month
   def initialize(month, year)
     @month = month
     @year = year

@@ -12,7 +12,10 @@ class TestCalYear < MiniTest::Unit::TestCase
       January               February               March
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 EOS
-assert_equal( expected.chomp, year.year_header)
+assert_equal(expected.chomp, year.year_header)
+  end
+
+  def test_2_
   end
 
 
