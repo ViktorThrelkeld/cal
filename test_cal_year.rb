@@ -67,14 +67,14 @@ end
     year = Year.new(1996)
     expected =
   "    1  2  3  4  5  6               1  2  3                  1  2"
-  assert_equal(expected.chomp, year.week_1_stringer(1, 2, 3, 1))
+  assert_equal(expected.chomp, year.week_stringer(1, 2, 3, 1))
   end
 
   def test_7_string_second_3_months_week_4
     year = Year.new(1996)
     expected =
     "21 22 23 24 25 26 27  19 20 21 22 23 24 25  16 17 18 19 20 21 22"
-    assert_equal(expected.chomp, year.week_1_stringer(4, 5, 6, 4))
+    assert_equal(expected.chomp, year.week_stringer(4, 5, 6, 4))
   end
 
 

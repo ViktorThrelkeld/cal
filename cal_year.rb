@@ -35,16 +35,16 @@ def initialize(year)
     week_header + space + week_header + space + week_header
   end
 
-  def week_1(month_num, week_number)
+  def week(month_num, week_number)
     index_week_number = week_number + 1
     week = get_month(month_num).lines.map(&:chomp)
     week = week[index_week_number]
   end
 
-  def week_1_stringer(month_1, month_2, month_3, week_number)
-    week_of_month_1 = week_1(month_1, week_number)
-    week_of_month_2 = week_1(month_2, week_number)
-    week_of_month_3 = week_1(month_3, week_number)
+  def week_stringer(month_1, month_2, month_3, week_number)
+    week_of_month_1 = week(month_1, week_number)
+    week_of_month_2 = week(month_2, week_number)
+    week_of_month_3 = week(month_3, week_number)
     space = "  "
     week_of_month_1 + space + week_of_month_2 + space + week_of_month_3
   end
