@@ -13,9 +13,26 @@ def initialize(year)
     month = Month.new(num, @year)
     month.output_month
   end
+  def month_header_1
+    month1 = get_month(1).lines.map(&:chomp)
+    month1 = month1[0].split(" ")
+    month1 = month1[0].center(20)
+    month2 = get_month(2).lines.map(&:chomp)
+    month2 = month2[0].split(" ")
+    month2 = month2[0].center(20)
+    month3 = get_month(3).lines.map(&:chomp)
+    month3 = month3[0].split(" ")
+    month3 = month3[0].center(20)
+    space = "  "
+    month1 + space + month2 + space + month3
+  end
 
-
-
+  def week_header
+    week_header = get_month(1).lines.map(&:chomp)
+    week_header = week_header[1]
+    space = "  "
+    week_header + space + week_header + space + week_header
+  end
 
 
 

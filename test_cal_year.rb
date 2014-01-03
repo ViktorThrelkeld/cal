@@ -41,8 +41,25 @@ EOS
     assert_equal(expected.chomp, year.get_month(2))
   end
 
+  def test_4_string_first_three_month_headers
+    year = Year.new(1996)
+    expected =
+  "      January               February               March        "
+  assert_equal(expected.chomp, year.month_header_1)
+  end
+
+  def test_5_string_week_header
+    year = Year.new(1996)
+    expected =
+  "Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa"
+  assert_equal(expected.chomp, year.week_header)
+  end
+
+
 
       # January               February               March
+
+
 # Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 
 
