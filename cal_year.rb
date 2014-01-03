@@ -6,14 +6,14 @@ def initialize(year)
   end
 
   def year_header
-    # year_head = "                            #{@year}".rstrip
     year_head = "#{@year}".center(60).rstrip
   end
 
-  def get_month1
-    month1 = Month.new(1, @year)
-    month1.output_month
+  def get_month(num)
+    month = Month.new(num, @year)
+    month.output_month
   end
+
 
 
 
