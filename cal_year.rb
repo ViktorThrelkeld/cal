@@ -13,6 +13,7 @@ def initialize(year)
     month = Month.new(month_num, @year)
     month.output_month
   end
+
   def month_header(num)
     month = get_month(num).lines.map(&:chomp)
     month = month[0].split(" ")
@@ -34,17 +35,26 @@ def initialize(year)
     week_header + space + week_header + space + week_header
   end
 
-  def first_3_months_week_1
-    month1_week1 = get_month(1).lines.map(&:chomp)
-    month1_week1 = month1_week1[2]
-    month2_week1 = get_month(2).lines.map(&:chomp)
-    month2_week1 = month2_week1[2]
-    month3_week1 = get_month(3).lines.map(&:chomp)
-    month3_week1 = month3_week1[2]
-    space = "  "
-    month1_week1 + space + month2_week1 + space + month3_week1
+  def week_1(month_num)
+    week_1 = get_month(month_num).lines.map(&:chomp)
+    week_1 = week_1[2]
+    # month1_week1 = get_month(1).lines.map(&:chomp)
+    # month1_week1 = month1_week1[2]
+    # month2_week1 = get_month(2).lines.map(&:chomp)
+    # month2_week1 = month2_week1[2]
+    # month3_week1 = get_month(3).lines.map(&:chomp)
+    # month3_week1 = month3_week1[2]
+    # space = "  "
+    # month1_week1 + space + month2_week1 + space + month3_week1
   end
 
+  def week_1_stringer(month_1, month_2, month_3)
+    week_1_month_1 = week_1(month_1)
+    week_1_month_2 = week_1(month_2)
+    week_1_month_3 = week_1(month_3)
+    space = "  "
+    week_1_month_1 + space + week_1_month_2 + space + week_1_month_3
+  end
 
 
 
