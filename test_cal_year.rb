@@ -55,6 +55,12 @@ EOS
   assert_equal(expected.chomp, year.week_header)
   end
 
+  def test_6_string_first_3_months_week_1
+    year = Year.new(1996)
+    expected =
+"    1  2  3  4  5  6               1  2  3                  1  2"
+  assert_equal(expected.chomp, year.first_3_months_week_1)
+  end
 
 
       # January               February               March
