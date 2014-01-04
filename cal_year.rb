@@ -46,19 +46,22 @@ def initialize(year)
     week_of_month_2 = week(month_2, week_number)
     week_of_month_3 = week(month_3, week_number)
 
-    # if week_of_month_1 == nil
-    #   week_of_month_1 = "                    "
-    # elsif week_of_month_2 == nil
-    #   week_of_month_2 = "                    "
-    # elsif week_of_month_3 == nil
-    #   week_of_month_3 = "                    "
-    # end
+    if week_of_month_1 == nil
+      week_of_month_1 = "                    "
+    end
+    if week_of_month_2 == nil
+      week_of_month_2 = "                    "
+    end
+    if week_of_month_3 == nil
+      week_of_month_3 = "                    "
+    end
     week_of_month_1 = week_of_month_1.ljust(20)
     week_of_month_2 = week_of_month_2.ljust(20)
     week_of_month_3 = week_of_month_3.ljust(20)
     space = "  "
 
     week_of_month_1 + space + week_of_month_2 + space + week_of_month_3
+
   end
 
 end

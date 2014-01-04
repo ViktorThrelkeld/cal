@@ -90,7 +90,12 @@ end
     "                                            30                  "
     assert_equal(expected.chomp, year.week_stringer(4, 5, 6, 6))
   end
-
+  def test_10_string_third_3_months_week_6
+    year = Year.new(1996)
+    expected =
+    "                                                                "
+    assert_equal(expected.chomp, year.week_stringer(7, 8, 9, 6))
+  end
 
 
 
