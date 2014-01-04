@@ -111,44 +111,50 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 23 24 25 26 27 28 29  27 28 29              26 27 28 29 30 31
 30 31
 
+       April                  May                   June
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+                   1      1  2  3  4  5  6               1  2  3
+ 2  3  4  5  6  7  8   7  8  9 10 11 12 13   4  5  6  7  8  9 10
+ 9 10 11 12 13 14 15  14 15 16 17 18 19 20  11 12 13 14 15 16 17
+16 17 18 19 20 21 22  21 22 23 24 25 26 27  18 19 20 21 22 23 24
+23 24 25 26 27 28 29  28 29 30 31           25 26 27 28 29 30
+30
+
 EOS
     assert_equal(expected, year.year_constructer)
   end
 
 end
 
-# -30 31
-# +30 31
 
-#  "
+# 23 24 25 26 27 28 29  27 28 29              26 27 28 29 30 31
+# 30 31
 
-
-# # -23 24 25 26 27 28 29  27 28 29              26 27 28 29 30 31
-# # -30 31"
-# +23 24 25 26 27 28 29  27 28 29              26 27 28 29 30 31
-# +30 31                                                           "
+#        April                  May                   June
+# Su Mo Tu We
 
 
+#  23 24 25 26 27 28 29  27 28 29              26 27 28 29 30 31
+#  30 31
 
-
-#  "                            2000
-# -      January               February               March
-# +      January               February               March
+# +
+#         April                  May                   June
 #  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
-#                     1         1  2  3  4  5            1  2  3  4
-#   2  3  4  5  6  7  8   6  7  8  9 10 11 12   5  6  7  8  9 10 11
+#                     1      1  2  3  4  5  6               1  2  3
+
+
+# 23 24 25 26 27 28 29  27 28 29              26 27 28 29 30 31
+#  30 31
+# -
+#         April                  May                   June
+#  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+#                     1      1  2  3  4  5  6               1  2  3
 
 
 
 
-# #        April                  May                   June
-# # Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
-# #                    1      1  2  3  4  5  6               1  2  3
-# #  2  3  4  5  6  7  8   7  8  9 10 11 12 13   4  5  6  7  8  9 10
-# #  9 10 11 12 13 14 15  14 15 16 17 18 19 20  11 12 13 14 15 16 17
-# # 16 17 18 19 20 21 22  21 22 23 24 25 26 27  18 19 20 21 22 23 24
-# # 23 24 25 26 27 28 29  28 29 30 31           25 26 27 28 29 30
-# # 30
+
+
 # #         July                 August              September
 # # Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 # #                    1         1  2  3  4  5                  1  2
