@@ -102,7 +102,7 @@ def initialize(year)
     rows<<week_stringer(10,11,12,4)
     rows<<week_stringer(10,11,12,5).rstrip
     rows<<week_stringer(10,11,12,6).rstrip
-    rows<<"\n"
+    rows<<""
 
     rows.join("\n")
   end
