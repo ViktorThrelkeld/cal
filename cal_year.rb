@@ -84,6 +84,24 @@ def initialize(year)
     rows<<week_stringer(4,5,6,4)
     rows<<week_stringer(4,5,6,5).rstrip
     rows<<week_stringer(4,5,6,6).rstrip
+    rows<<""
+    rows<<month_header_stringer(7,8,9)
+    rows<<week_header
+    rows<<week_stringer(7,8,9,1)
+    rows<<week_stringer(7,8,9,2)
+    rows<<week_stringer(7,8,9,3)
+    rows<<week_stringer(7,8,9,4)
+    rows<<week_stringer(7,8,9,5).rstrip
+    rows<<week_stringer(7,8,9,6).rstrip
+    rows<<""
+    rows<<month_header_stringer(10,11,12)
+    rows<<week_header
+    rows<<week_stringer(10,11,12,1)
+    rows<<week_stringer(10,11,12,2)
+    rows<<week_stringer(10,11,12,3)
+    rows<<week_stringer(10,11,12,4)
+    rows<<week_stringer(10,11,12,5).rstrip
+    rows<<week_stringer(10,11,12,6).rstrip
     rows<<"\n"
 
     rows.join("\n")
