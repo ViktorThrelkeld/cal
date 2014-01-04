@@ -24,6 +24,7 @@ def initialize(year)
     month1 = month_header(month_1)
     month2 = month_header(month_2)
     month3 = month_header(month_3)
+    month3 = month3.rstrip
     space = "  "
     month1 + space + month2 + space + month3
   end
@@ -61,7 +62,22 @@ def initialize(year)
     space = "  "
 
     week_of_month_1 + space + week_of_month_2 + space + week_of_month_3
+  end
 
+  def year_constructer
+    rows = []
+    rows<<year_header
+    rows<<month_header_stringer(1,2,3)
+    rows<<week_header
+
+    rows<<week_stringer(1,2,3,1)
+    rows<<week_stringer(1,2,3,2)
+    rows<<week_stringer(1,2,3,3)
+    rows<<week_stringer(1,2,3,4)
+    rows<<week_stringer(1,2,3,5).rstrip
+    rows<<week_stringer(1,2,3,6).rstrip
+    rows<<"\n"
+    rows.join("\n")
   end
 
 end
