@@ -26,6 +26,12 @@ class TestCal < MiniTest::Unit::TestCase
     assert_equal(expected, `ruby cal.rb 1996`)
   end
 
+  def test_5_get_a_6_week_month
+     expected = `cal 09 2012`
+    assert_equal(expected, `ruby cal.rb 09 2012`)
+  end
+
+  
 
 
 
