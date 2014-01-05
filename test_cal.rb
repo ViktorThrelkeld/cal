@@ -16,6 +16,16 @@ class TestCal < MiniTest::Unit::TestCase
     assert_equal(expected, `ruby cal.rb 1977`)
   end
 
+  def test_3_leap_century_integration
+    expected = `cal 2000`
+    assert_equal(expected, `ruby cal.rb 2000`)
+  end
+
+  def test_4_leap_year_integration
+    expected = `cal 1996`
+    assert_equal(expected, `ruby cal.rb 1996`)
+  end
+
 
 
 
