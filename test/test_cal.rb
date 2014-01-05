@@ -1,7 +1,7 @@
-require_relative '../lib/cal_month'
-require_relative '../lib/cal_year'
 require_relative '../cal'
 require 'minitest/autorun'
+require_relative '../lib/cal_month'
+require_relative '../lib/cal_year'
 
 class TestCal < MiniTest::Unit::TestCase
 
@@ -31,6 +31,12 @@ class TestCal < MiniTest::Unit::TestCase
     assert_equal(expected, `ruby cal.rb 09 2012`)
   end
 
+  # def test_6_argument_error_for_missing_argument
+  #   shell_output = `ruby cal.rb 1799`
+  #   assert_raises ArgumentError do
+  #     raise ArgumentError, 'Range is 1800 through 3000'
+  #   end
+  # end
   
 
 
