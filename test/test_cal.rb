@@ -1,6 +1,6 @@
-require_relative 'cal_month'
-require_relative 'cal_year'
-require_relative 'cal'
+require_relative '../lib/cal_month'
+require_relative '../lib/cal_year'
+require_relative '../cal'
 require 'minitest/autorun'
 
 class TestCal < MiniTest::Unit::TestCase

@@ -1,5 +1,5 @@
-require_relative 'cal_month'
-require_relative 'cal_year'
+require_relative 'lib/cal_month'
+require_relative 'lib/cal_year'
 
 
 
