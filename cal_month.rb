@@ -63,34 +63,3 @@ attr_reader :output_month
     header.rstrip + "\n" + line_break
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# if @month == 1 || @month == 2
-    #   m = @month +12
-    #   y = @year - 1
-    # else
-    #   m = @month
-    #   y = @year
-    # end

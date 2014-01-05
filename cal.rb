@@ -4,16 +4,22 @@ require_relative 'cal_year'
 if ARGV.length == 2
   month = Month.new(ARGV[0].to_i, ARGV[1].to_i)
   month = month.output_month
-
+  month = month.split(/\n/)
+  month = month.map{|line| line.ljust(22)}
+  month = month.join("\n")
   puts month
 end
 
 if ARGV.length == 1
   year = Year.new(ARGV[0].to_i)
   year = year.year_constructer
+  # year = year.split(/\n/)
+  # year = year.map{|line| line.ljust(66)}
+  # year = year.join("\n")
 
   puts year
 end
+
 
 # "    January 1977
 # -Su Mo Tu We Th Fr Sa
@@ -33,7 +39,9 @@ end
 # +30 31
 #  "
 
-# #  "                            1977
+
+
+#  "                            1977
 # -      January               February               March
 # -Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 # -                   1         1  2  3  4  5         1  2  3  4  5
