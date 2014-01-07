@@ -1,9 +1,9 @@
 require_relative 'lib/cal_month'
 require_relative 'lib/cal_year'
 
-if ARGV[0].to_i < 1800
+# if ARGV[0].to_i < 1800
   # raise ArgumentError, 'Range is 1800 through 3000'
-end
+# end
 
 if ARGV.length == 1
   year = Year.new(ARGV[0].to_i)
