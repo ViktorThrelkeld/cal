@@ -138,7 +138,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 29 30 31              26 27 28 29 30        24 25 26 27 28 29 30  
                                             31                    
 EOS
-    assert_equal(expected, year.year_constructer)
+    assert_equal(expected, year.output_year)
   end
 
   def test_12_print_year
@@ -181,7 +181,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 27 28 29 30 31        24 25 26 27 28 29 30  29 30 31              
                                                                   
 EOS
-  assert_equal(expected, year.year_constructer)
+  assert_equal(expected, year.output_year)
     end
 end
 

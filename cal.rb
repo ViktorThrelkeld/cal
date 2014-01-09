@@ -5,7 +5,7 @@ require_relative 'lib/cal_year'
 
 if ARGV.length == 1
   year = Year.new(ARGV[0].to_i)
-  year = year.year_constructer
+  year = year.output_year
   puts year #this is printing out all that crap at the top
 
 elsif ARGV.length == 2

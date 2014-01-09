@@ -74,16 +74,12 @@ def initialize(year)
     first_three_months<<""
   end
 
-  def year_constructer
+  def output_year
     rows = []
     rows<<year_header
     4.times do |i|
       rows<<three_months_of_year((3*i)+1, (3*i)+2, (3*i)+3)
     end
-    # rows<<three_months_of_year(1,2,3)
-    # rows<<three_months_of_year(4,5,6)
-    # rows<<three_months_of_year(7,8,9)
-    # rows<<three_months_of_year(10,11,12)
     rows.join("\n")
   end
 
