@@ -24,7 +24,6 @@ def initialize(year)
     month1 = month_header(month_1)
     month2 = month_header(month_2)
     month3 = month_header(month_3)
-    # month3 = month3.rstrip
 
     space = "  "
     month1 + space + month2 + space + month3 + space
@@ -74,8 +73,6 @@ def initialize(year)
     rows<<week_stringer(1,2,3,2)
     rows<<week_stringer(1,2,3,3)
     rows<<week_stringer(1,2,3,4)
-    # rows<<week_stringer(1,2,3,5).rstrip
-    # rows<<week_stringer(1,2,3,6).rstrip
     rows<<week_stringer(1,2,3,5)
     rows<<week_stringer(1,2,3,6)
     rows<<""
@@ -85,8 +82,6 @@ def initialize(year)
     rows<<week_stringer(4,5,6,2)
     rows<<week_stringer(4,5,6,3)
     rows<<week_stringer(4,5,6,4)
-    # rows<<week_stringer(4,5,6,5).rstrip
-    # rows<<week_stringer(4,5,6,6).rstrip
     rows<<week_stringer(4,5,6,5)
     rows<<week_stringer(4,5,6,6)
     rows<<""
@@ -96,8 +91,6 @@ def initialize(year)
     rows<<week_stringer(7,8,9,2)
     rows<<week_stringer(7,8,9,3)
     rows<<week_stringer(7,8,9,4)
-    # rows<<week_stringer(7,8,9,5).rstrip
-    # rows<<week_stringer(7,8,9,6).rstrip
     rows<<week_stringer(7,8,9,5)
     rows<<week_stringer(7,8,9,6)
     rows<<""
@@ -107,8 +100,6 @@ def initialize(year)
     rows<<week_stringer(10,11,12,2)
     rows<<week_stringer(10,11,12,3)
     rows<<week_stringer(10,11,12,4)
-    # rows<<week_stringer(10,11,12,5).rstrip
-    # rows<<week_stringer(10,11,12,6).rstrip
     rows<<week_stringer(10,11,12,5)
     rows<<week_stringer(10,11,12,6)
     rows<<""

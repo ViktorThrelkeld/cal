@@ -32,12 +32,12 @@ class TestCal < MiniTest::Unit::TestCase
     assert_equal(expected, `ruby cal.rb 09 2012`)
   end
 
-  # def test_6_argument_error_for_missing_argument
-  #   shell_output = `ruby cal.rb 1799`
-  #   assert_raises ArgumentError do
-  #     raise ArgumentError, 'Range is 1800 through 3000'
-  #   end
-  # end
+  def test_6_argument_error_for_range
+    shell_output = `ruby cal.rb 1799`
+    assert_raises ArgumentError do
+      raise ArgumentError, 'Range is 1800 through 3000'
+    end
+  end
   
 
 
