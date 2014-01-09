@@ -8,7 +8,10 @@ attr_reader :output_month
   end
 
   def header
-    months = {1 => "January", 2 => "February", 3 => "March", 4 => "April", 5 => "May", 6 => "June", 7 => "July", 8 => "August", 9 => "September", 10 => "October", 11 => "November", 12 => "December"}
+    months = {1 => "January", 2 => "February", 3 => "March",
+              4 => "April", 5 => "May", 6 => "June",
+              7 => "July", 8 => "August", 9 => "September",
+              10 => "October", 11 => "November", 12 => "December"}
     string = "#{months[@month]} #{@year}".center(20).rstrip
     @header = string + "\nSu Mo Tu We Th Fr Sa"
   end
