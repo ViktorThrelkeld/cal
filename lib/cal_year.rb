@@ -77,10 +77,13 @@ def initialize(year)
   def year_constructer
     rows = []
     rows<<year_header
-    rows<<three_months_of_year(1,2,3)
-    rows<<three_months_of_year(4,5,6)
-    rows<<three_months_of_year(7,8,9)
-    rows<<three_months_of_year(10,11,12)
+    4.times do |i|
+      rows<<three_months_of_year((3*i)+1, (3*i)+2, (3*i)+3)
+    end
+    # rows<<three_months_of_year(1,2,3)
+    # rows<<three_months_of_year(4,5,6)
+    # rows<<three_months_of_year(7,8,9)
+    # rows<<three_months_of_year(10,11,12)
     rows.join("\n")
   end
 
