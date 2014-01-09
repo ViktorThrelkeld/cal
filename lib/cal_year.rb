@@ -64,34 +64,23 @@ def initialize(year)
     week_of_month_1 + space + week_of_month_2 + space + week_of_month_3 + space
   end
 
+  def three_months_of_year(month1, month2, month3)
+    first_three_months = []
+    first_three_months<<month_header_stringer(month1, month2, month3)
+    first_three_months<<week_header
+    6.times do |i|
+      first_three_months<<week_stringer(month1, month2, month3, i +1)
+    end
+    first_three_months<<""
+  end
+
   def year_constructer
     rows = []
     rows<<year_header
-    rows<<month_header_stringer(1,2,3)
-    rows<<week_header
-    6.times do |i|
-      rows<<week_stringer(1,2,3, i +1)
-    end
-    rows<<""
-    rows<<month_header_stringer(4,5,6)
-    rows<<week_header
-    6.times do |i|
-      rows<<week_stringer(4, 5, 6, i +1)
-    end
-    rows<<""
-    rows<<month_header_stringer(7,8,9)
-    rows<<week_header
-    6.times do |i|
-      rows<<week_stringer(7, 8, 9, i +1)
-    end
-    rows<<""
-    rows<<month_header_stringer(10,11,12)
-    rows<<week_header
-    6.times do |i|
-    rows<<week_stringer(10,11,12, i +1)
-  end
-    rows<<""
-
+    rows<<three_months_of_year(1,2,3)
+    rows<<three_months_of_year(4,5,6)
+    rows<<three_months_of_year(7,8,9)
+    rows<<three_months_of_year(10,11,12)
     rows.join("\n")
   end
 
