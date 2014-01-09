@@ -152,5 +152,4 @@ Su Mo Tu We Th Fr Sa
 EOS
     assert_equal( expected.chomp, month.output_month)
   end
-
 end

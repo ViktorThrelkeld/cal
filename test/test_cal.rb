@@ -38,8 +38,4 @@ class TestCal < MiniTest::Unit::TestCase
       raise ArgumentError, 'Range is 1800 through 3000'
     end
   end
-  
-
-
-
 end

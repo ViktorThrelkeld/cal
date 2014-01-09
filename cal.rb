@@ -1,8 +1,6 @@
 require_relative 'lib/cal_month'
 require_relative 'lib/cal_year'
 
-
-
 if ARGV.length == 1
   year = Year.new(ARGV[0].to_i)
   year = year.output_year
@@ -16,5 +14,3 @@ elsif ARGV.length == 2
   month = month.join("\n")
   puts month
 end
-
-
